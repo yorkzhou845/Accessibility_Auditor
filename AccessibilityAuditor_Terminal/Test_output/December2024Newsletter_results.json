@@ -1,0 +1,12 @@
+[
+  {
+    "document_name": "December2024Newsletter.pdf",
+    "task": "unsupported",
+    "classification_reason": "Rule match: unsupported low-level PDF issue such as font, CIDSet, ToUnicode, annotation, metadata, form, tab-order, or optional-content problem.",
+    "remediations": [],
+    "warnings": [
+      "No LLM remediation was generated because this failure is outside the three supported project tasks."
+    ],
+    "failure_report": "December2024Newsletter: Clause 7.21.7: The Font dictionary of all fonts shall define the map of all used character codes to Unicode values, either via a ToUnicode entry, or other mechanisms as defined in ISO 14289-1, 7.21.7\n"
+  }
+]

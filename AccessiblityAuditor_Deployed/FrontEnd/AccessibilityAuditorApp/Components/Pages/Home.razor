@@ -1,0 +1,205 @@
+@page "/"
+@rendermode InteractiveServer
+
+@using AccessibilityAuditorApp.Models
+@using AccessibilityAuditorApp.Services
+@using Microsoft.AspNetCore.Components.Forms
+
+@inject JobStorageService JobStorageService
+@inject PythonEngineService PythonEngineService
+@inject PdfEditingService PdfEditingService
+@inject ResultPackageService ResultPackageService
+@inject IJSRuntime JS
+
+<PageTitle>PDF Accessibility Auditor</PageTitle>
+
+<div class="auditor-shell">
+    <section class="auditor-card">
+        <div class="auditor-header">
+            <p class="eyebrow">PDF Accessibility Auditor</p>
+            <h1>Remediate PDF accessibility issues</h1>
+            <p class="lead-text">
+                Select image captioning, table summarization, or both. The app downloads one ZIP containing the edited PDF and accessibility_remediation_summary.txt.
+            </p>
+        </div>
+
+        <div class="minimal-section">
+            <h2>1. Select task</h2>
+            <div class="task-checklist" role="group" aria-label="Remediation tasks">
+                <label class="task-option @(imageCaptioningSelected ? "selected" : "")">
+                    <input type="checkbox" @bind="imageCaptioningSelected" @bind:after="ClearResult" disabled="@isUploading" />
+                    <span>
+                        <strong>Image captioning</strong>
+                        <small>Find images and add or update image alt text.</small>
+                    </span>
+                </label>
+
+                <label class="task-option @(tableSummarySelected ? "selected" : "")">
+                    <input type="checkbox" @bind="tableSummarySelected" @bind:after="ClearResult" disabled="@isUploading" />
+                    <span>
+                        <strong>Table summarization</strong>
+                        <small>Find tables and add screen-reader summaries where supported.</small>
+                    </span>
+                </label>
+            </div>
+        </div>
+
+        <div class="minimal-section">
+            <h2>2. Attach PDF</h2>
+            <div class="file-drop-area single-file-drop-area">
+                <div class="file-drop-card">
+                    <label for="pdfUpload">
+                        <span class="drop-title">PDF file</span>
+                        <span class="drop-copy">Choose the PDF to remediate.</span>
+                    </label>
+                    <InputFile id="pdfUpload" OnChange="OnPdfSelected" accept=".pdf" disabled="@isUploading" />
+                    @if (pdfFile is not null)
+                    {
+                        <p class="selected-file">@pdfFile.Name</p>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <button class="primary-button" @onclick="UploadFiles" disabled="@isUploading">
+            @(isUploading ? "Processing..." : "Create PDF and download ZIP")
+        </button>
+
+        @if (!string.IsNullOrWhiteSpace(errorMessage))
+        {
+            <div class="error-box" role="alert">@errorMessage</div>
+        }
+
+        @if (!string.IsNullOrWhiteSpace(successMessage))
+        {
+            <div class="edited-output" role="status">
+                @successMessage
+            </div>
+        }
+    </section>
+</div>
+
+@code {
+    private const string TableSummaryTask = "table_summary";
+    private const string ImageCaptioningTask = "alt_text";
+
+    private IBrowserFile? pdfFile;
+    private string? errorMessage;
+    private string? successMessage;
+    private bool isUploading;
+    private bool imageCaptioningSelected;
+    private bool tableSummarySelected;
+
+    private void ClearResult()
+    {
+        errorMessage = null;
+        successMessage = null;
+    }
+
+    private void OnPdfSelected(InputFileChangeEventArgs e)
+    {
+        pdfFile = e.File;
+        ClearResult();
+    }
+
+    private async Task UploadFiles()
+    {
+        errorMessage = null;
+        successMessage = null;
+
+        var selectedTasks = GetSelectedTasks();
+
+        if (selectedTasks.Count == 0)
+        {
+            errorMessage = "Please select image captioning, table summarization, or both.";
+            return;
+        }
+
+        if (pdfFile is null)
+        {
+            errorMessage = "Please select a PDF file.";
+            return;
+        }
+
+        UploadJobResult? activeJob = null;
+
+        try
+        {
+            isUploading = true;
+
+            var taskDisplayName = GetTaskDisplayName(selectedTasks);
+
+            activeJob = await JobStorageService.SaveUploadAsync(
+                pdfFile,
+                selectedTasks,
+                taskDisplayName
+            );
+
+            activeJob = await PythonEngineService.RunAsync(activeJob);
+
+            if (activeJob.Status != "Engine complete")
+            {
+                throw new InvalidOperationException(
+                    "The remediation service could not complete this document. Please try again or contact the application administrator."
+                );
+            }
+
+            activeJob = await PdfEditingService.CreateEditedPdfAsync(activeJob);
+
+            if (!activeJob.EditedPdfCreated)
+                throw new InvalidOperationException("The edited PDF was not created.");
+
+            var zipPath = await ResultPackageService.CreatePackageAsync(activeJob);
+            var zipFileName = ResultPackageService.GetPackageFileName(activeJob);
+
+            await using var zipStream = new FileStream(
+                zipPath,
+                FileMode.Open,
+                FileAccess.Read,
+                FileShare.Read,
+                bufferSize: 81920,
+                useAsync: true
+            );
+
+            using var streamReference = new DotNetStreamReference(zipStream);
+            await JS.InvokeVoidAsync("downloadFileFromStream", zipFileName, streamReference);
+
+            successMessage = "The results ZIP download has started. Temporary processing files are removed immediately after transfer.";
+        }
+        catch (Exception ex)
+        {
+            errorMessage = ex.Message;
+        }
+        finally
+        {
+            JobStorageService.DeleteJobFolder(activeJob);
+            isUploading = false;
+        }
+    }
+
+    private List<string> GetSelectedTasks()
+    {
+        var tasks = new List<string>();
+
+        if (imageCaptioningSelected)
+            tasks.Add(ImageCaptioningTask);
+
+        if (tableSummarySelected)
+            tasks.Add(TableSummaryTask);
+
+        return tasks;
+    }
+
+    private static string GetTaskDisplayName(IReadOnlyCollection<string> tasks)
+    {
+        var labels = new List<string>();
+
+        if (tasks.Contains(ImageCaptioningTask))
+            labels.Add("Image Captioning");
+
+        if (tasks.Contains(TableSummaryTask))
+            labels.Add("Table Summarization");
+
+        return string.Join(" and ", labels);
+    }
+}

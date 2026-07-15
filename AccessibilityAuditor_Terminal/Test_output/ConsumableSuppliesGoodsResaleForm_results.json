@@ -1,0 +1,58 @@
+[
+  {
+    "document_name": "ConsumableSuppliesGoodsResaleForm.pdf",
+    "page_number": 1,
+    "document_width": 612,
+    "document_height": 792,
+    "task": "table_summary",
+    "remediations": [
+      {
+        "id": "remediation_001",
+        "target_scope": "element",
+        "target_entry_ids": [
+          "entry_001"
+        ],
+        "target_coordinates": {
+          "x": 72,
+          "y": 217,
+          "width": 468,
+          "height": 174
+        },
+        "issue": "Table may need a Markdown representation and screen-reader summary.",
+        "recommended_action": "Review and inject the Summary attribute with IronPDF.",
+        "proposed_change": {
+          "action_type": "add_table_summary",
+          "markdown_table": "| Column 1 | Column 2 | Column 3 | Column 4 |\n|---|---|---|---| \n|  | CONSUMABLE S UPPLIES (> $15 K TOTAL ) |  |  |\n| INVENTORY DATE |  |  |  |\n| ACCOUNT NUMBER |  |  |  |\n| ACCOUNT NAME / DESCRIPTION |  |  |  |\n| PREPARER NAME |  |  |  |\n| PREPARER TELEPHONE NUMBER |  |  |  |\n| INVENTORY AMOUNT |  | $ |  |\n",
+          "summary": "This table captures information related to consumable supplies inventory, including details like account numbers, descriptions, preparer information, and the total inventory amount.",
+          "summary_attribute": "table"
+        },
+        "human_review_required": true,
+        "confidence": 0.95
+      },
+      {
+        "id": "remediation_002",
+        "target_scope": "element",
+        "target_entry_ids": [
+          "entry_002"
+        ],
+        "target_coordinates": {
+          "x": 72,
+          "y": 416,
+          "width": 468,
+          "height": 175
+        },
+        "issue": "Table may need a Markdown representation and screen-reader summary.",
+        "recommended_action": "Review and inject the Summary attribute with IronPDF.",
+        "proposed_change": {
+          "action_type": "add_table_summary",
+          "markdown_table": "| COLUMN HEADER 1 | COLUMN HEADER 2 |\n|---|---|\n| G OO D S F OR R E S A L E (> $ 15 K T O T A L ) |  |\n| INVENTORY DATE |  |\n| ACCOUNT NUMBER |  |\n| ACCOUNT NAME / DESCRIPTION |  |\n| PREPARER NAME |  |\n| PREPARER TELEPHONE NUMBER |  |\n| INVENTORY AMOUNT | $\n",
+          "summary": "This table collects information regarding goods resale inventory, including the total value, date, account details, preparer information, and inventory amount.",
+          "summary_attribute": "table_description"
+        },
+        "human_review_required": true,
+        "confidence": 0.8
+      }
+    ],
+    "warnings": []
+  }
+]

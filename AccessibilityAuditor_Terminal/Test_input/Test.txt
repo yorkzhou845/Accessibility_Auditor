@@ -1,0 +1,1 @@
+Task required: Add appropriate alternative text for images and figures.

@@ -1,0 +1,7 @@
+id,title,content,source
+alt-meaningful,Meaningful images,"Write concise alternative text that communicates the image's purpose or essential information in context. Avoid redundant phrases such as 'image of' when the object can be named directly.",Project-authored example guidance
+alt-decorative,Decorative images,"Decorative images should not add spoken content. Mark them decorative or use empty alternative text only when they convey no information and do not perform a function.",Project-authored example guidance
+alt-text-in-image,Text inside images,"When readable text in an image is necessary to understand the document, include the essential visible text or its equivalent in the proposed alternative text.",Project-authored example guidance
+table-summary,Table summaries,"A table summary should briefly explain the table's subject and organization, especially when relationships are not obvious from individual cells. Preserve the extracted data for human verification.",Project-authored example guidance
+table-headers,Table headers,"Accessible tables depend on reliable row and column headers. This project only proposes summaries and does not reconstruct missing table header relationships.",Project-authored example guidance
+human-review,Human review,"Generated captions and summaries are suggestions. A person should verify factual accuracy, context, reading order, and whether the selected PDF structure element is the correct target.",Project-authored example guidance

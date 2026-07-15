@@ -1,0 +1,54 @@
+THis is the version I am working with. My manager told me to move the entire backend to the GB10. He hinted at using a "nano instance". I also got these directions from him. PLease help me.GB10-Server
+
+66.230.43.54
+
+
+yorzhou
+
+2H0aDrP2k9CXEBW2iI50XDNm3xLRzjb1
+
+
+https://mobaxterm.mobatek.net/download-home-edition.html
+
+ 
+
+Check the Firewall Status and Allowed Ports
+
+sudo ufw status verbose
+
+
+
+2H0aDrP2k9CXEBW2iI50XDNm3xLRzjb1
+Identifier policyagent
+
+App ID policyagent
+
+Key
+
+b6e7c2c1-3b27-4dff-9870-71456aadbf5e
+
+Secret
+
+2720037b-e08f-49ef-9071-b5afdc941346
+
+POLICY_PILOT_BACKEND_API_KEY="80a5493eb99ee64028f0dc1d6482e716ae2136733128543d44758b7892eb84f5"
+Accesiblity auditor API key = "e2b2726d595e7b0b36597467068cb1f05f09e95b1fd81a0173e2a8fc75fb9b6f"
+
+
+***********************************************************************
+[Unit]
+Description=Accessibility Auditor GB10 Backend
+After=network.target
+
+[Service]
+User=yorzhou
+WorkingDirectory=/home/yorzhou/accessibility-auditor-backend
+Environment="ACCESSIBILITY_AUDITOR_BACKEND_API_KEY=e2b2726d595e7b0b36597467068cb1f05f09e95b1fd81a0173e2a8fc75fb9b6f"
+Environment="OLLAMA_BASE_URL=http://127.0.0.1:11434"
+Environment="ACCESSIBILITY_AUDITOR_ENGINE_TIMEOUT_SECONDS=3600"
+ExecStart=/home/yorzhou/accessibility-auditor-backend/.venv/bin/python -m uvicorn backend_server:app --host 0.0.0.0 --port 8091
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

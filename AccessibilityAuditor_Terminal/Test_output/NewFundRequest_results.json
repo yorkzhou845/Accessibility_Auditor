@@ -1,0 +1,12 @@
+[
+  {
+    "document_name": "NewFundRequest.pdf",
+    "task": "unsupported",
+    "classification_reason": "The report indicates a successful PDF/UA-1 validation, which means no accessibility issues were identified based on the supported tasks.",
+    "remediations": [],
+    "warnings": [
+      "No LLM remediation was generated because this failure is outside the three supported project tasks."
+    ],
+    "failure_report": "NewFundRequest: Passed PDF/UA-1 Validation\n"
+  }
+]

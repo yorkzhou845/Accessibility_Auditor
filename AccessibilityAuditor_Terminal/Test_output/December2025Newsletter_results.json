@@ -1,0 +1,12 @@
+[
+  {
+    "document_name": "December2025Newsletter.pdf",
+    "task": "unsupported",
+    "classification_reason": "Rule match: unsupported low-level PDF issue such as font, CIDSet, ToUnicode, annotation, metadata, form, tab-order, or optional-content problem.",
+    "remediations": [],
+    "warnings": [
+      "No LLM remediation was generated because this failure is outside the three supported project tasks."
+    ],
+    "failure_report": "December2025Newsletter: Clause 7.21.4.2: If the FontDescriptor dictionary of an embedded CID font contains a CIDSet stream, then it shall identify all CIDs which are present in the font program, regardless of whether a CID in the font is referenced or used by the PDF or not\n"
+  }
+]

@@ -1,0 +1,64 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+
+# User inputs, generated reports, and caches
+*.pdf
+*.db
+*.sqlite
+*.sqlite3
+*.gguf
+models/
+chroma/
+input/*
+!input/.gitkeep
+output/*
+!output/.gitkeep
+data/*
+!data/.gitkeep
+*.log
+
+# Common generated PDF analysis artifacts
+*_results.json
+*_Failure_Report.txt
+rendered_pages/
+cropped_images/
+vector_store.csv
+
+# IDE and operating system
+.vscode/
+.idea/
+*.user
+*.suo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archives and build artifacts
+*.zip
+*.tar
+*.gz
+build/
+dist/
+*.egg-info/

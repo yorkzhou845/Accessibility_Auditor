@@ -1,0 +1,45 @@
+# Secrets and machine-local configuration
+.env
+.env.*
+!.env.example
+**/appsettings.Local.json
+**/appsettings.*.Local.json
+**/*.secret.json
+
+# Python
+**/.venv/
+**/venv/
+**/__pycache__/
+**/.pytest_cache/
+**/*.py[cod]
+
+# Generated CSV vector database
+Backend/data/vector_store.csv
+
+# .NET / Visual Studio
+**/.vs/
+**/[Bb]in/
+**/[Oo]bj/
+**/*.user
+**/*.suo
+**/publish/
+
+# Temporary inputs and generated outputs
+**/input.pdf
+**/edited.pdf
+**/rendered_pages/
+**/cropped_images/
+**/all_results.json
+**/*_results.json
+**/accessibility_remediation_summary.txt
+**/*_accessibility_results.zip
+**/backend-jobs/
+**/Jobs/
+*.log
+
+# User-provided documents should not be committed by default
+*.pdf
+
+# Operating-system files
+.DS_Store
+Thumbs.db

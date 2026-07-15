@@ -1,0 +1,672 @@
+[
+  {
+    "document_name": "BACalendar.pdf",
+    "failure_report": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_input\\BACalendar_Failure_Report.txt",
+    "result_file": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_output\\BACalendar_results.json",
+    "results": [
+      {
+        "document_name": "BACalendar.pdf",
+        "task": "unsupported",
+        "classification_reason": "Rule match: unsupported low-level PDF issue such as font, CIDSet, ToUnicode, annotation, metadata, form, tab-order, or optional-content problem.",
+        "remediations": [],
+        "warnings": [
+          "No LLM remediation was generated because this failure is outside the three supported project tasks."
+        ],
+        "failure_report": "BACalendar: Clause 7.10: Each optional content configuration dictionary that forms the value of the D key, or that is an element in the array that forms the value of the Configs key in the OCProperties dictionary, shall contain the Name key\n"
+      }
+    ]
+  },
+  {
+    "document_name": "CashFundReimbursementForm.pdf",
+    "failure_report": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_input\\CashFundReimbursementForm_Failure_Report.txt",
+    "result_file": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_output\\CashFundReimbursementForm_results.json",
+    "results": [
+      {
+        "document_name": "CashFundReimbursementForm.pdf",
+        "task": "unsupported",
+        "classification_reason": "Rule match: unsupported low-level PDF issue such as font, CIDSet, ToUnicode, annotation, metadata, form, tab-order, or optional-content problem.",
+        "remediations": [],
+        "warnings": [
+          "No LLM remediation was generated because this failure is outside the three supported project tasks."
+        ],
+        "failure_report": "CashFundReimbursementForm: Clause 7.21.4.2: If the FontDescriptor dictionary of an embedded CID font contains a CIDSet stream, then it shall identify all CIDs which are present in the font program, regardless of whether a CID in the font is referenced or used by the PDF or not\n"
+      }
+    ]
+  },
+  {
+    "document_name": "CashReceiptsHelp.pdf",
+    "failure_report": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_input\\CashReceiptsHelp_Failure_Report.txt",
+    "result_file": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_output\\CashReceiptsHelp_results.json",
+    "results": [
+      {
+        "document_name": "CashReceiptsHelp.pdf",
+        "task": "unsupported",
+        "classification_reason": "The report indicates a successful PDF/UA-1 validation, which means no accessibility issues were found based on that standard. The system is designed to address specific remediation tasks.",
+        "remediations": [],
+        "warnings": [
+          "No LLM remediation was generated because this failure is outside the three supported project tasks."
+        ],
+        "failure_report": "CashReceiptsHelp: Passed PDF/UA-1 Validation\n"
+      }
+    ]
+  },
+  {
+    "document_name": "ConsumableSuppliesGoodsResaleForm.pdf",
+    "failure_report": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_input\\ConsumableSuppliesGoodsResaleForm_Failure_Report.txt",
+    "result_file": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_output\\ConsumableSuppliesGoodsResaleForm_results.json",
+    "results": [
+      {
+        "document_name": "ConsumableSuppliesGoodsResaleForm.pdf",
+        "page_number": 1,
+        "document_width": 612,
+        "document_height": 792,
+        "task": "table_summary",
+        "remediations": [
+          {
+            "id": "remediation_001",
+            "target_scope": "element",
+            "target_entry_ids": [
+              "entry_001"
+            ],
+            "target_coordinates": {
+              "x": 72,
+              "y": 217,
+              "width": 468,
+              "height": 174
+            },
+            "issue": "Table may need a Markdown representation and screen-reader summary.",
+            "recommended_action": "Review and inject the Summary attribute with IronPDF.",
+            "proposed_change": {
+              "action_type": "add_table_summary",
+              "markdown_table": "| Column 1 | Column 2 | Column 3 | Column 4 |\n|---|---|---|---| \n|  | CONSUMABLE S UPPLIES (> $15 K TOTAL ) |  |  |\n| INVENTORY DATE |  |  |  |\n| ACCOUNT NUMBER |  |  |  |\n| ACCOUNT NAME / DESCRIPTION |  |  |  |\n| PREPARER NAME |  |  |  |\n| PREPARER TELEPHONE NUMBER |  |  |  |\n| INVENTORY AMOUNT |  | $ |  |\n",
+              "summary": "This table captures information related to consumable supplies inventory, including details like account numbers, descriptions, preparer information, and the total inventory amount.",
+              "summary_attribute": "table"
+            },
+            "human_review_required": true,
+            "confidence": 0.95
+          },
+          {
+            "id": "remediation_002",
+            "target_scope": "element",
+            "target_entry_ids": [
+              "entry_002"
+            ],
+            "target_coordinates": {
+              "x": 72,
+              "y": 416,
+              "width": 468,
+              "height": 175
+            },
+            "issue": "Table may need a Markdown representation and screen-reader summary.",
+            "recommended_action": "Review and inject the Summary attribute with IronPDF.",
+            "proposed_change": {
+              "action_type": "add_table_summary",
+              "markdown_table": "| COLUMN HEADER 1 | COLUMN HEADER 2 |\n|---|---|\n| G OO D S F OR R E S A L E (> $ 15 K T O T A L ) |  |\n| INVENTORY DATE |  |\n| ACCOUNT NUMBER |  |\n| ACCOUNT NAME / DESCRIPTION |  |\n| PREPARER NAME |  |\n| PREPARER TELEPHONE NUMBER |  |\n| INVENTORY AMOUNT | $\n",
+              "summary": "This table collects information regarding goods resale inventory, including the total value, date, account details, preparer information, and inventory amount.",
+              "summary_attribute": "table_description"
+            },
+            "human_review_required": true,
+            "confidence": 0.8
+          }
+        ],
+        "warnings": []
+      }
+    ]
+  },
+  {
+    "document_name": "CRTravelReportsWithPreAppImport.pdf",
+    "task": "error",
+    "remediations": [],
+    "warnings": [
+      "name 'clean_text' is not defined"
+    ]
+  },
+  {
+    "document_name": "December2024Newsletter.pdf",
+    "failure_report": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_input\\December2024Newsletter_Failure_Report.txt",
+    "result_file": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_output\\December2024Newsletter_results.json",
+    "results": [
+      {
+        "document_name": "December2024Newsletter.pdf",
+        "task": "unsupported",
+        "classification_reason": "Rule match: unsupported low-level PDF issue such as font, CIDSet, ToUnicode, annotation, metadata, form, tab-order, or optional-content problem.",
+        "remediations": [],
+        "warnings": [
+          "No LLM remediation was generated because this failure is outside the three supported project tasks."
+        ],
+        "failure_report": "December2024Newsletter: Clause 7.21.7: The Font dictionary of all fonts shall define the map of all used character codes to Unicode values, either via a ToUnicode entry, or other mechanisms as defined in ISO 14289-1, 7.21.7\n"
+      }
+    ]
+  },
+  {
+    "document_name": "December2025Newsletter.pdf",
+    "failure_report": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_input\\December2025Newsletter_Failure_Report.txt",
+    "result_file": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_output\\December2025Newsletter_results.json",
+    "results": [
+      {
+        "document_name": "December2025Newsletter.pdf",
+        "task": "unsupported",
+        "classification_reason": "Rule match: unsupported low-level PDF issue such as font, CIDSet, ToUnicode, annotation, metadata, form, tab-order, or optional-content problem.",
+        "remediations": [],
+        "warnings": [
+          "No LLM remediation was generated because this failure is outside the three supported project tasks."
+        ],
+        "failure_report": "December2025Newsletter: Clause 7.21.4.2: If the FontDescriptor dictionary of an embedded CID font contains a CIDSet stream, then it shall identify all CIDs which are present in the font program, regardless of whether a CID in the font is referenced or used by the PDF or not\n"
+      }
+    ]
+  },
+  {
+    "document_name": "DirectPayFormsTips.pdf",
+    "failure_report": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_input\\DirectPayFormsTips_Failure_Report.txt",
+    "result_file": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_output\\DirectPayFormsTips_results.json",
+    "results": [
+      {
+        "document_name": "DirectPayFormsTips.pdf",
+        "task": "unsupported",
+        "classification_reason": "The report indicates a successful PDF/UA-1 validation, meaning no accessibility issues were identified by the validator.",
+        "remediations": [],
+        "warnings": [
+          "No LLM remediation was generated because this failure is outside the three supported project tasks."
+        ],
+        "failure_report": "DirectPayFormsTips: Passed PDF/UA-1 Validation\n"
+      }
+    ]
+  },
+  {
+    "document_name": "ExceptionTimelyDepositFundsForm.pdf",
+    "failure_report": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_input\\ExceptionTimelyDepositFundsForm_Failure_Report.txt",
+    "result_file": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_output\\ExceptionTimelyDepositFundsForm_results.json",
+    "results": [
+      {
+        "document_name": "ExceptionTimelyDepositFundsForm.pdf",
+        "task": "unsupported",
+        "classification_reason": "Rule match: unsupported low-level PDF issue such as font, CIDSet, ToUnicode, annotation, metadata, form, tab-order, or optional-content problem.",
+        "remediations": [],
+        "warnings": [
+          "No LLM remediation was generated because this failure is outside the three supported project tasks."
+        ],
+        "failure_report": "ExceptionTimelyDepositFundsForm: Clause 7.18.4: If the Form element omits a Role attribute (Table 348), it shall have only one child: an object reference (14.7.4.3) identifying the widget annotation per ISO 32000-1:2008, 14.8.4.5, Table 340\nExceptionTimelyDepositFundsForm: Clause 7.18.3: Every page on which there is an annotation shall contain in its page dictionary the key Tabs, and its value shall be S\nExceptionTimelyDepositFundsForm: Clause 7.21.7: The Font dictionary of all fonts shall define the map of all used character codes to Unicode values, either via a ToUnicode entry, or other mechanisms as defined in ISO 14289-1, 7.21.7\nExceptionTimelyDepositFundsForm: Clause 7.21.4.2: If the FontDescriptor dictionary of an embedded CID font contains a CIDSet stream, then it shall identify all CIDs which are present in the font program, regardless of whether a CID in the font is referenced or used by the PDF or not\n"
+      }
+    ]
+  },
+  {
+    "document_name": "FMChangeRequestTraining.pdf",
+    "failure_report": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_input\\FMChangeRequestTraining_Failure_Report.txt",
+    "result_file": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_output\\FMChangeRequestTraining_results.json",
+    "results": [
+      {
+        "document_name": "FMChangeRequestTraining.pdf",
+        "task": "unsupported",
+        "classification_reason": "The report indicates a successful PDF/UA-1 validation, meaning no accessibility issues were identified by the validator.",
+        "remediations": [],
+        "warnings": [
+          "No LLM remediation was generated because this failure is outside the three supported project tasks."
+        ],
+        "failure_report": "FMChangeRequestTraining: Passed PDF/UA-1 Validation\n"
+      }
+    ]
+  },
+  {
+    "document_name": "FMQuickstartguide.pdf",
+    "failure_report": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_input\\FMQuickstartguide_Failure_Report.txt",
+    "result_file": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_output\\FMQuickstartguide_results.json",
+    "results": [
+      {
+        "document_name": "FMQuickstartguide.pdf",
+        "task": "unsupported",
+        "classification_reason": "The PDF passed PDF/UA-1 validation, indicating no accessibility issues detected by that tool.",
+        "remediations": [],
+        "warnings": [
+          "No LLM remediation was generated because this failure is outside the three supported project tasks."
+        ],
+        "failure_report": "FMQuickstartguide: Passed PDF/UA-1 Validation\n"
+      }
+    ]
+  },
+  {
+    "document_name": "FundNameChangeTraining.pdf",
+    "failure_report": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_input\\FundNameChangeTraining_Failure_Report.txt",
+    "result_file": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_output\\FundNameChangeTraining_results.json",
+    "results": [
+      {
+        "document_name": "FundNameChangeTraining.pdf",
+        "task": "unsupported",
+        "classification_reason": "The report indicates a successful PDF/UA-1 validation, meaning no accessibility issues were found based on the supported tasks.",
+        "remediations": [],
+        "warnings": [
+          "No LLM remediation was generated because this failure is outside the three supported project tasks."
+        ],
+        "failure_report": "FundNameChangeTraining: Passed PDF/UA-1 Validation\n"
+      }
+    ]
+  },
+  {
+    "document_name": "GFD_Supplement_FY25FY26.pdf",
+    "failure_report": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_input\\GFD_Supplement_FY25FY26_Failure_Report.txt",
+    "result_file": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_output\\GFD_Supplement_FY25FY26_results.json",
+    "results": [
+      {
+        "document_name": "GFD_Supplement_FY25FY26.pdf",
+        "page_number": 1,
+        "document_width": 612,
+        "document_height": 792,
+        "task": "table_summary",
+        "remediations": [
+          {
+            "id": "remediation_001",
+            "target_scope": "element",
+            "target_entry_ids": [
+              "entry_001"
+            ],
+            "target_coordinates": {
+              "x": 32,
+              "y": 682,
+              "width": 568,
+              "height": 36
+            },
+            "issue": "Table may need a Markdown representation and screen-reader summary.",
+            "recommended_action": "Review and inject the Summary attribute with IronPDF.",
+            "proposed_change": {
+              "action_type": "add_table_summary",
+              "markdown_table": "| Student Business Services | 806-743-7867 |\n|---|---| \n| 6630 South Quaker Avenue, Suite H, Lubbock, TX 79414 | sbs@ttuhsc.edu |",
+              "summary": "This table provides contact information for the Student Business Services department at Texas Tech University Health Sciences Center.",
+              "summary_attribute": ""
+            },
+            "human_review_required": true,
+            "confidence": 0.95
+          }
+        ],
+        "warnings": []
+      },
+      {
+        "document_name": "GFD_Supplement_FY25FY26.pdf",
+        "page_number": 2,
+        "document_width": 612,
+        "document_height": 792,
+        "task": "table_summary",
+        "remediations": [],
+        "warnings": [
+          "No tables were detected on this page."
+        ]
+      },
+      {
+        "document_name": "GFD_Supplement_FY25FY26.pdf",
+        "page_number": 3,
+        "document_width": 612,
+        "document_height": 792,
+        "task": "table_summary",
+        "remediations": [
+          {
+            "id": "remediation_001",
+            "target_scope": "element",
+            "target_entry_ids": [
+              "entry_001"
+            ],
+            "target_coordinates": {
+              "x": 72,
+              "y": 357,
+              "width": 458,
+              "height": 40
+            },
+            "issue": "Table may need a Markdown representation and screen-reader summary.",
+            "recommended_action": "Review and inject the Summary attribute with IronPDF.",
+            "proposed_change": {
+              "action_type": "add_table_summary",
+              "markdown_table": "| Student Business Services website per Texas Education Code section 54.504. | Tuition, fees, and charges | |\n|---|---|--|\n| are subject to change by administrative, legislative, or regent action, and changes become effective on |  | |\n| the date enacted. This document will be updated to reflect those changes as they become effective. |  | |",
+              "summary": "This table outlines that tuition, fees, and charges are subject to change based on various actions and updates to the associated documentation.",
+              "summary_attribute": ""
+            },
+            "human_review_required": true,
+            "confidence": 0.9
+          }
+        ],
+        "warnings": []
+      },
+      {
+        "document_name": "GFD_Supplement_FY25FY26.pdf",
+        "page_number": 4,
+        "document_width": 612,
+        "document_height": 792,
+        "task": "table_summary",
+        "remediations": [],
+        "warnings": [
+          "No tables were detected on this page."
+        ]
+      },
+      {
+        "document_name": "GFD_Supplement_FY25FY26.pdf",
+        "page_number": 5,
+        "document_width": 612,
+        "document_height": 792,
+        "task": "table_summary",
+        "remediations": [],
+        "warnings": [
+          "No tables were detected on this page."
+        ]
+      },
+      {
+        "document_name": "GFD_Supplement_FY25FY26.pdf",
+        "page_number": 6,
+        "document_width": 612,
+        "document_height": 792,
+        "task": "table_summary",
+        "remediations": [],
+        "warnings": [
+          "No tables were detected on this page."
+        ]
+      },
+      {
+        "document_name": "GFD_Supplement_FY25FY26.pdf",
+        "page_number": 7,
+        "document_width": 612,
+        "document_height": 792,
+        "task": "table_summary",
+        "remediations": [],
+        "warnings": [
+          "No tables were detected on this page."
+        ]
+      },
+      {
+        "document_name": "GFD_Supplement_FY25FY26.pdf",
+        "page_number": 8,
+        "document_width": 612,
+        "document_height": 792,
+        "task": "table_summary",
+        "remediations": [],
+        "warnings": [
+          "No tables were detected on this page."
+        ]
+      },
+      {
+        "document_name": "GFD_Supplement_FY25FY26.pdf",
+        "page_number": 9,
+        "document_width": 612,
+        "document_height": 792,
+        "task": "table_summary",
+        "remediations": [],
+        "warnings": [
+          "No tables were detected on this page."
+        ]
+      },
+      {
+        "document_name": "GFD_Supplement_FY25FY26.pdf",
+        "page_number": 10,
+        "document_width": 612,
+        "document_height": 792,
+        "task": "table_summary",
+        "remediations": [
+          {
+            "id": "remediation_001",
+            "target_scope": "element",
+            "target_entry_ids": [
+              "entry_001"
+            ],
+            "target_coordinates": {
+              "x": 72,
+              "y": 297,
+              "width": 471,
+              "height": 352
+            },
+            "issue": "Table may need a Markdown representation and screen-reader summary.",
+            "recommended_action": "Review and inject the Summary attribute with IronPDF.",
+            "proposed_change": {
+              "action_type": "add_table_summary",
+              "markdown_table": "| School of Health Professions | Program | Non-Funded\nSection Rate | Military Non-Funded\nSection Rate |\n|---|---|---|---| \n| B.S. Healthcare Management (HPHM) | 189.50 | 189.50 |\n| M.S. Healthcare Administration (HPHA) | 445.00 | 320.00 |\n| Deaf Education Certification | 325.00 | 325.00 |\n| M.S. Clinical Rehabilitation Counseling (HPCR) | 445.00 | 320.00 |\n| Master of Science in Clinical Mental Health (MSCMH) | 445.00 | 320.00 |\n| Master of Science in Addiction Counseling (MSAC) | 445.00 | 320.00 |\n| Doctor of Science Clinical Rehabilitation Counsel (HPDS | 590.00 | 320.00 |\n| Sc.D. Physical Therapy (ScDpt) | 590.00 | 320.00 |\n| Professional Doctorate Occupation Therapy HPOT-\nODPT | 590.00 | 320.00 |\n| Medical Lab Science (HPML) | 355.00 | 260.00 |\n|  |  |  |\n| School of Population and Public Health | Master of Public Health | 625.00 | 165.00 |\n|  |  |  |\n| School of Nursing | Undergraduate | 365.00 | 365.00 |\n|  | Accelerated | 390.00 | 390.00 |\n|  | Masters | 455.00 | 455.00 |\n|  | Doctoral | 605.00 | 605.00 |\n|  |  |  |\n| • All Fees assessed per semester credit hour |  |  | |\n",
+              "summary": "This table displays tuition rates for various graduate and undergraduate programs within the university's health professions schools.",
+              "summary_attribute": "table_description"
+            },
+            "human_review_required": true,
+            "confidence": 0.95
+          }
+        ],
+        "warnings": []
+      },
+      {
+        "document_name": "GFD_Supplement_FY25FY26.pdf",
+        "page_number": 11,
+        "document_width": 612,
+        "document_height": 792,
+        "task": "table_summary",
+        "remediations": [],
+        "warnings": [
+          "No tables were detected on this page."
+        ]
+      },
+      {
+        "document_name": "GFD_Supplement_FY25FY26.pdf",
+        "page_number": 12,
+        "document_width": 612,
+        "document_height": 792,
+        "task": "table_summary",
+        "remediations": [],
+        "warnings": [
+          "No tables were detected on this page."
+        ]
+      },
+      {
+        "document_name": "GFD_Supplement_FY25FY26.pdf",
+        "page_number": 13,
+        "document_width": 612,
+        "document_height": 792,
+        "task": "table_summary",
+        "remediations": [
+          {
+            "id": "remediation_001",
+            "target_scope": "element",
+            "target_entry_ids": [
+              "entry_001"
+            ],
+            "target_coordinates": {
+              "x": 90,
+              "y": 561,
+              "width": 445,
+              "height": 91
+            },
+            "issue": "Table may need a Markdown representation and screen-reader summary.",
+            "recommended_action": "Review and inject the Summary attribute with IronPDF.",
+            "proposed_change": {
+              "action_type": "add_table_summary",
+              "markdown_table": "| Column 1 | Column 2 |\n|---|---|\n| Exempts the student from the payment of certain fees for activities, services, or facilities not available to them at their course location. |  |\n| Students enrolled in only web-based instruction may also be eligible for an off-campus waiver. |  |\n| Notification of waiver eligibility is provided from the various academic departments to the Student Business Services Office for each semester/term. |  |\n| Waivers must be manually entered onto a students' account after registration is completed. |  |\n| Students may elect to pay any or all of the waived fees by contacting the HSC Student Business Services Office |  |",
+              "summary": "This table outlines eligibility criteria for student waivers, including exemptions from certain fees and the process for manual account updates.",
+              "summary_attribute": "eligibility criteria"
+            },
+            "human_review_required": true,
+            "confidence": 0.95
+          }
+        ],
+        "warnings": []
+      },
+      {
+        "document_name": "GFD_Supplement_FY25FY26.pdf",
+        "page_number": 14,
+        "document_width": 612,
+        "document_height": 792,
+        "task": "table_summary",
+        "remediations": [
+          {
+            "id": "remediation_001",
+            "target_scope": "element",
+            "target_entry_ids": [
+              "entry_001"
+            ],
+            "target_coordinates": {
+              "x": 72,
+              "y": 102,
+              "width": 450,
+              "height": 143
+            },
+            "issue": "Table may need a Markdown representation and screen-reader summary.",
+            "recommended_action": "Review and inject the Summary attribute with IronPDF.",
+            "proposed_change": {
+              "action_type": "add_table_summary",
+              "markdown_table": "| Location | Fee Type           | Coverage | Student Services | Medical Services | Student Union | Recreation Center | Student Athletic | ID Card | \n|---|---|---|---|---|---|---|---|---| \n| Abilene  | Student Services Fee | Full    | X               | X               | X               | X               | X                | X      |\n| Amarillo | Student Services Fee | 80%     | X               | X               | X               | X               | X                | X      |\n| Dallas   | Student Services Fee | Full    | X               | X               | X               | X               | X                | X      |\n| El Paso  | Student Services Fee | 80%     | X               | X               | X               | X               | X                | X      |\n| Midland  | Student Services Fee | Full    | X               | X               | X               | X               | X                | X      |\n| Odessa   | Student Services Fee | 80%     | X               | X               | X               | X               | X                | X      |\n| Full-Grad NR| Student Services Fee | 80%     | X               | X               | X               | X               | X                | X      |",
+              "summary": "This table outlines fee coverage options for students based on their location, including student services, medical services, and recreation center fees.",
+              "summary_attribute": "table"
+            },
+            "human_review_required": true,
+            "confidence": 0.9
+          }
+        ],
+        "warnings": []
+      },
+      {
+        "document_name": "GFD_Supplement_FY25FY26.pdf",
+        "page_number": 15,
+        "document_width": 612,
+        "document_height": 792,
+        "task": "table_summary",
+        "remediations": [],
+        "warnings": [
+          "No tables were detected on this page."
+        ]
+      },
+      {
+        "document_name": "GFD_Supplement_FY25FY26.pdf",
+        "page_number": 16,
+        "document_width": 612,
+        "document_height": 792,
+        "task": "table_summary",
+        "remediations": [],
+        "warnings": [
+          "No tables were detected on this page."
+        ]
+      }
+    ]
+  },
+  {
+    "document_name": "June2025Newsletter.pdf",
+    "failure_report": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_input\\June2025Newsletter_Failure_Report.txt",
+    "result_file": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_output\\June2025Newsletter_results.json",
+    "results": [
+      {
+        "document_name": "June2025Newsletter.pdf",
+        "task": "unsupported",
+        "classification_reason": "Rule match: unsupported low-level PDF issue such as font, CIDSet, ToUnicode, annotation, metadata, form, tab-order, or optional-content problem.",
+        "remediations": [],
+        "warnings": [
+          "No LLM remediation was generated because this failure is outside the three supported project tasks."
+        ],
+        "failure_report": "June2025Newsletter: Clause 7.21.5: For every font embedded in a conforming file and used for rendering, the glyph width information in the font dictionary and in the embedded font program shall be consistent\nJune2025Newsletter: Clause 7.21.7: The Font dictionary of all fonts shall define the map of all used character codes to Unicode values, either via a ToUnicode entry, or other mechanisms as defined in ISO 14289-1, 7.21.7\n"
+      }
+    ]
+  },
+  {
+    "document_name": "March2025Newsletter.pdf",
+    "failure_report": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_input\\March2025Newsletter_Failure_Report.txt",
+    "result_file": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_output\\March2025Newsletter_results.json",
+    "results": [
+      {
+        "document_name": "March2025Newsletter.pdf",
+        "task": "unsupported",
+        "classification_reason": "Rule match: unsupported low-level PDF issue such as font, CIDSet, ToUnicode, annotation, metadata, form, tab-order, or optional-content problem.",
+        "remediations": [],
+        "warnings": [
+          "No LLM remediation was generated because this failure is outside the three supported project tasks."
+        ],
+        "failure_report": "March2025Newsletter: Clause 7.21.5: For every font embedded in a conforming file and used for rendering, the glyph width information in the font dictionary and in the embedded font program shall be consistent\nMarch2025Newsletter: Clause 7.21.7: The Font dictionary of all fonts shall define the map of all used character codes to Unicode values, either via a ToUnicode entry, or other mechanisms as defined in ISO 14289-1, 7.21.7\nMarch2025Newsletter: Clause 7.21.8: A PDF/UA compliant document shall not contain a reference to the .notdef glyph from any of the text showing operators, regardless of text rendering mode, in any content stream\nMarch2025Newsletter: Clause 7.21.7: The Unicode values specified in the ToUnicode CMap shall all be greater than zero (0), but not equal to either U+FEFF or U+FFFE\n"
+      }
+    ]
+  },
+  {
+    "document_name": "NewFundRequest.pdf",
+    "failure_report": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_input\\NewFundRequest_Failure_Report.txt",
+    "result_file": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_output\\NewFundRequest_results.json",
+    "results": [
+      {
+        "document_name": "NewFundRequest.pdf",
+        "task": "unsupported",
+        "classification_reason": "The report indicates a successful PDF/UA-1 validation, which means no accessibility issues were identified based on the supported tasks.",
+        "remediations": [],
+        "warnings": [
+          "No LLM remediation was generated because this failure is outside the three supported project tasks."
+        ],
+        "failure_report": "NewFundRequest: Passed PDF/UA-1 Validation\n"
+      }
+    ]
+  },
+  {
+    "document_name": "September2025Newsletter.pdf",
+    "failure_report": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_input\\September2025Newsletter_Failure_Report.txt",
+    "result_file": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_output\\September2025Newsletter_results.json",
+    "results": [
+      {
+        "document_name": "September2025Newsletter.pdf",
+        "task": "unsupported",
+        "classification_reason": "Rule match: unsupported low-level PDF issue such as font, CIDSet, ToUnicode, annotation, metadata, form, tab-order, or optional-content problem.",
+        "remediations": [],
+        "warnings": [
+          "No LLM remediation was generated because this failure is outside the three supported project tasks."
+        ],
+        "failure_report": "September2025Newsletter: Clause 7.21.5: For every font embedded in a conforming file and used for rendering, the glyph width information in the font dictionary and in the embedded font program shall be consistent\nSeptember2025Newsletter: Clause 7.21.8: A PDF/UA compliant document shall not contain a reference to the .notdef glyph from any of the text showing operators, regardless of text rendering mode, in any content stream\nSeptember2025Newsletter: Clause 7.21.7: The Unicode values specified in the ToUnicode CMap shall all be greater than zero (0), but not equal to either U+FEFF or U+FFFE\n"
+      }
+    ]
+  },
+  {
+    "document_name": "SHP Athletic Training 2025-2026 estimates.pdf",
+    "failure_report": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_input\\SHP Athletic Training 2025-2026 estimates_Failure_Report.txt",
+    "result_file": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_output\\SHP Athletic Training 2025-2026 estimates_results.json",
+    "results": [
+      {
+        "document_name": "SHP Athletic Training 2025-2026 estimates.pdf",
+        "task": "unsupported",
+        "classification_reason": "Rule match: unsupported low-level PDF issue such as font, CIDSet, ToUnicode, annotation, metadata, form, tab-order, or optional-content problem.",
+        "remediations": [],
+        "warnings": [
+          "No LLM remediation was generated because this failure is outside the three supported project tasks."
+        ],
+        "failure_report": "SHP Athletic Training 2025-2026 estimates: Clause 7.21.4.2: If the FontDescriptor dictionary of an embedded CID font contains a CIDSet stream, then it shall identify all CIDs which are present in the font program, regardless of whether a CID in the font is referenced or used by the PDF or not\n"
+      }
+    ]
+  },
+  {
+    "document_name": "SHP Healthcare Admin 2025-2026 estimate.pdf",
+    "failure_report": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_input\\SHP Healthcare Admin 2025-2026 estimate_Failure_Report.txt",
+    "result_file": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_output\\SHP Healthcare Admin 2025-2026 estimate_results.json",
+    "results": [
+      {
+        "document_name": "SHP Healthcare Admin 2025-2026 estimate.pdf",
+        "task": "unsupported",
+        "classification_reason": "The report indicates a successful PDF/UA-1 validation, which implies no accessibility issues were detected based on the specified criteria.",
+        "remediations": [],
+        "warnings": [
+          "No LLM remediation was generated because this failure is outside the three supported project tasks."
+        ],
+        "failure_report": "SHP Healthcare Admin 2025-2026 estimate: Passed PDF/UA-1 Validation\n"
+      }
+    ]
+  },
+  {
+    "document_name": "SHP Healthcare Management 2025-2026 Tuition estimates.pdf",
+    "failure_report": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_input\\SHP Healthcare Management 2025-2026 Tuition estimates_Failure_Report.txt",
+    "result_file": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_output\\SHP Healthcare Management 2025-2026 Tuition estimates_results.json",
+    "results": [
+      {
+        "document_name": "SHP Healthcare Management 2025-2026 Tuition estimates.pdf",
+        "task": "unsupported",
+        "classification_reason": "The report indicates a successful PDF/UA-1 validation, which implies no accessibility issues were identified by that specific tool.",
+        "remediations": [],
+        "warnings": [
+          "No LLM remediation was generated because this failure is outside the three supported project tasks."
+        ],
+        "failure_report": "SHP Healthcare Management 2025-2026 Tuition estimates: Passed PDF/UA-1 Validation\n"
+      }
+    ]
+  },
+  {
+    "document_name": "TerminateFundTraining.pdf",
+    "failure_report": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_input\\TerminateFundTraining_Failure_Report.txt",
+    "result_file": "C:\\Users\\yorzhou\\TTU_code\\Accessibility Auditor\\Test_output\\TerminateFundTraining_results.json",
+    "results": [
+      {
+        "document_name": "TerminateFundTraining.pdf",
+        "task": "unsupported",
+        "classification_reason": "The report indicates a successful PDF/UA-1 validation, meaning no accessibility issues were found according to that standard. This falls outside the scope of my supported remediation tasks.",
+        "remediations": [],
+        "warnings": [
+          "No LLM remediation was generated because this failure is outside the three supported project tasks."
+        ],
+        "failure_report": "TerminateFundTraining: Passed PDF/UA-1 Validation\n"
+      }
+    ]
+  }
+]

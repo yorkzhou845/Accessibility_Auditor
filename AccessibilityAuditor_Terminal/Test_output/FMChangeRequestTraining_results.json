@@ -1,0 +1,12 @@
+[
+  {
+    "document_name": "FMChangeRequestTraining.pdf",
+    "task": "unsupported",
+    "classification_reason": "The report indicates a successful PDF/UA-1 validation, meaning no accessibility issues were identified by the validator.",
+    "remediations": [],
+    "warnings": [
+      "No LLM remediation was generated because this failure is outside the three supported project tasks."
+    ],
+    "failure_report": "FMChangeRequestTraining: Passed PDF/UA-1 Validation\n"
+  }
+]

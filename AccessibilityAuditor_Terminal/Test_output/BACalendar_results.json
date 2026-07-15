@@ -1,0 +1,12 @@
+[
+  {
+    "document_name": "BACalendar.pdf",
+    "task": "unsupported",
+    "classification_reason": "Rule match: unsupported low-level PDF issue such as font, CIDSet, ToUnicode, annotation, metadata, form, tab-order, or optional-content problem.",
+    "remediations": [],
+    "warnings": [
+      "No LLM remediation was generated because this failure is outside the three supported project tasks."
+    ],
+    "failure_report": "BACalendar: Clause 7.10: Each optional content configuration dictionary that forms the value of the D key, or that is an element in the array that forms the value of the Configs key in the OCProperties dictionary, shall contain the Name key\n"
+  }
+]

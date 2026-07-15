@@ -1,0 +1,20 @@
+[project]
+name = "accessibility-auditor-local"
+version = "0.1.0"
+description = "Local PDF accessibility analysis template using Ollama and a CSV vector store."
+requires-python = ">=3.10"
+dependencies = [
+  "PyMuPDF>=1.24,<2",
+  "requests>=2.31,<3",
+]
+
+[project.scripts]
+accessibility-auditor = "accessibility_auditor.main:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["accessibility_auditor*"]
+exclude = ["input*", "output*", "data*", "knowledge_base*", "scripts*", "tests*"]

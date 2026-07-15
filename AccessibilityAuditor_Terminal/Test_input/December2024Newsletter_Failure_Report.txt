@@ -1,0 +1,1 @@
+December2024Newsletter: Clause 7.21.7: The Font dictionary of all fonts shall define the map of all used character codes to Unicode values, either via a ToUnicode entry, or other mechanisms as defined in ISO 14289-1, 7.21.7

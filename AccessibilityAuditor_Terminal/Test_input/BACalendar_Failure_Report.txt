@@ -1,0 +1,1 @@
+BACalendar: Clause 7.10: Each optional content configuration dictionary that forms the value of the D key, or that is an element in the array that forms the value of the Configs key in the OCProperties dictionary, shall contain the Name key

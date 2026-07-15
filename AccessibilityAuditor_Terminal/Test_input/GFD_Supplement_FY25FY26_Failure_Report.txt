@@ -1,0 +1,2 @@
+GFD_Supplement_FY25FY26: Clause 7.5: If the table's structure is not determinable via Headers and IDs, then structure elements of type TH shall have a Scope attribute
+GFD_Supplement_FY25FY26: Clause 7.2: Table rows shall have the same number of columns (taking into account column spans)

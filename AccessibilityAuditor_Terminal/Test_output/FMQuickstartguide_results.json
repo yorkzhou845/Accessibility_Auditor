@@ -1,0 +1,12 @@
+[
+  {
+    "document_name": "FMQuickstartguide.pdf",
+    "task": "unsupported",
+    "classification_reason": "The PDF passed PDF/UA-1 validation, indicating no accessibility issues detected by that tool.",
+    "remediations": [],
+    "warnings": [
+      "No LLM remediation was generated because this failure is outside the three supported project tasks."
+    ],
+    "failure_report": "FMQuickstartguide: Passed PDF/UA-1 Validation\n"
+  }
+]
