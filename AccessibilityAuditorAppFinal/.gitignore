@@ -1,0 +1,18 @@
+# Visual Studio / .NET
+.vs/
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+publish/
+
+# Secrets
+.env
+*.secret.json
+
+# Generated test artifacts
+**/input.pdf
+**/edited.pdf
+**/all_results.json
+**/accessibility_remediation_summary.txt
+**/*_results.zip
